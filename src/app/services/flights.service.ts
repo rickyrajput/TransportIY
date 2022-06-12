@@ -32,7 +32,6 @@ DestinationOrders :[] =[];
       .pipe(map((data:any)=>{
         this.Orders=[];
         Object.keys(data).forEach((key)=>{  this.Orders.push(new Order(key,data[key].destination)) });
-        debugger;
         return this.Orders;
         }))
     }
