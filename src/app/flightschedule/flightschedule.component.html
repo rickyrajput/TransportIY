@@ -1,7 +1,7 @@
 
 <div class="container">
     <h3>Transport.Iy</h3><span> An automated air freight scheduling service</span>
-    <a class="btn btn-primary pull-right" [routerLink]="['/order']">VIEW ORDER SCHEDULE</a>
+    <a class="btn btn-primary pull-right" [routerLink]="['/order',0]">VIEW ORDER SCHEDULE</a>
     <div class="col-md-12" *ngFor="let obj of FlightDayWise">
       <span class="help-block"> Scheduled flights for day : {{obj.Day}}</span>
   <table  class="table" >

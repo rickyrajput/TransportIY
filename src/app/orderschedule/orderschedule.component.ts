@@ -43,8 +43,13 @@ ngOnInit(){
             })
          })
          this.activatedRoute.params.subscribe((param)=> {this.selectedFlightNumber =  +param["flightNumber"];});
-         this.Orders = orders.filter(x=>x.FlightNumber == this.selectedFlightNumber);
          
+         if(this.selectedFlightNumber  == 0){
+          this.Orders = orders 
+         }
+         else{
+         this.Orders = orders.filter(x=>x.FlightNumber == this.selectedFlightNumber);
+         }
        },
       (err)=>{console.log(err);});
   }
