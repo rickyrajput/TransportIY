@@ -1,0 +1,24 @@
+
+<div class="container">
+    <h3>Transport.Iy</h3><span> An auotmated air freight scheduling service</span>
+    <a class="btn btn-success pull-right" [routerLink]="['/order']">VIEW ORDER SCHEDULE</a>
+    <div class="col-md-12" *ngFor="let obj of FlightDayWise">
+      <span class="help-block"> Scheduled flights for day : {{obj.Day}}</span>
+  <table  class="table" >
+    <th>Flight</th>
+    <th>Departure</th>
+    <th>Arrival</th>
+    <th>View Flight</th>
+    <tbody>
+      <tr *ngFor="let flight of obj.Flights">
+        <td>{{flight.flight_number}}</td>
+        <td>{{flight.departure_city}}</td>
+        <td>{{flight.arrival_city}}</td>
+        <td> <a class="btn btn-success pull-right" [routerLink]="['/order',flight.flight_number]">View Flight</a></td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+  </div>
+  
+  

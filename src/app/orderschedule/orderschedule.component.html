@@ -1,0 +1,22 @@
+
+<div class="container">
+    <h3>Transport.Iy</h3><span> An auotmated air freight scheduling service</span>
+    <a class="btn btn-success pull-right" [routerLink]="'/flight'">VIEW FLIGHT SCHEDULE</a>
+<h4>Flight</h4>    
+  <table  class="table" >
+    <th>Order</th>
+    <th>Flight</th>
+    <th>Departure</th>
+    <th>Arrival</th>
+    <th>Day</th>
+    <tbody>
+      <tr *ngFor="let order of Orders">
+        <td>{{order.OrderNumber}}</td>
+        <td>{{order.FlightNumber}}</td>
+        <td>{{order.Arrival}}</td>
+        <td>{{order.OrderDestination}}</td>
+        <td>{{order.Day}}</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
