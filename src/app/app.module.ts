@@ -6,20 +6,26 @@ import { AppComponent } from './app.component';
 import { FlightService } from './services/flights.service';
 import { OrderscheduleComponent } from './orderschedule/orderschedule.component';
 import { FlightscheduleComponent } from './flightschedule/flightschedule.component';
+import { AuthService } from './auth/auth.service';
+import { LoginComponent } from './login/login.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     OrderscheduleComponent,
-    FlightscheduleComponent
+    FlightscheduleComponent,
+    LoginComponent
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
     
   ],
-  providers: [FlightService],
+  providers: [FlightService,AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
